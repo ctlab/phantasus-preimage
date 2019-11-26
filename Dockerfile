@@ -17,3 +17,5 @@ RUN apt-get -y update && \
         libcairo2-dev
 
 RUN R -e 'BiocManager::install(c("testthat", "BiocStyle", "knitr", "rmarkdown", "data.table"))'
+
+RUN R -e 'BiocManager::install(c("Rook"))
