@@ -62,8 +62,7 @@ RUN R -e 'BiocManager::install(c("ggplot2", "GEOquery", "htmltools", \
         "AnnotationDbi", "DESeq2", "Rook"))' && \
     R -e 'remove.packages("BH")'
 
-RUN R -e 'BiocManager::install(c("testthat", "BiocStyle", "knitr", "rmarkdown", "data.table"))' && \
-    R -e 'remove.packages("BH")'
+RUN R -e 'BiocManager::install(c("testthat", "BiocStyle", "knitr", "rmarkdown", "data.table"))'
 
 
 RUN \
