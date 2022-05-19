@@ -16,7 +16,7 @@ RUN R -e 'BiocManager::install(c("ggplot2", "GEOquery", "genefilter","htmltools"
         "httpuv", "jsonlite", "limma", "assertthat", "methods", "httr", "rhdf5", \
         "utils", "parallel", "stringr", "fgsea", "svglite", "gtable", "stats", \
         "Matrix", "Matrix.utils", "pheatmap", "scales", "ccaPP", "grid", "grDevices", \
-        "AnnotationDbi", "DESeq2", "Rook"))' && \
+        "AnnotationDbi", "apeglm", "DESeq2", "Rook"))' && \
     R -e 'remove.packages("BH")'
         
 RUN R -e 'BiocManager::install(c("testthat", "BiocStyle", "knitr", "rmarkdown", "data.table"))'
