@@ -7,7 +7,10 @@ RUN apt-get -y update && \
         libcairo2-dev \
         libcurl4-openssl-dev \
         pandoc \
-        apt-utils
+        apt-utils \
+        libtiff5-dev \
+        libfribidi-dev \
+        libharfbuzz-dev
 
 RUN R -e 'install.packages(c("devtools", "R.utils"), repo = "https://cran.rstudio.com/")'
 
