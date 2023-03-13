@@ -16,7 +16,7 @@ RUN R -e 'install.packages(c("devtools", "R.utils"), repo = "https://cran.rstudi
 
 RUN R -e 'install.packages("BiocManager"); BiocManager::install()'
 RUN R -e 'BiocManager::install(c("ggplot2", "GEOquery", "genefilter","htmltools", \
-        "httpuv", "jsonlite", "limma", "assertthat", "methods", "httr", "rhdf5", \
+        "httpuv", "jsonlite", "limma", "edgeR", "assertthat", "methods", "httr", "rhdf5", \
         "utils", "parallel", "stringr", "fgsea", "svglite", "gtable", "stats", \
         "Matrix", "Matrix.utils", "pheatmap", "scales", "ccaPP", "grid", "grDevices", \
         "AnnotationDbi", "apeglm", "DESeq2", "Rook"))' && \
