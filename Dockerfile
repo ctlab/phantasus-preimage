@@ -12,7 +12,7 @@ RUN apt-get -y update && \
         libfribidi-dev \
         libharfbuzz-dev
 
-RUN R -e 'install.packages(c("devtools", "R.utils"), repo = "https://cran.rstudio.com/")'
+RUN R -e 'install.packages(c("devtools", "R.utils", "config"), repo = "https://cran.rstudio.com/")'
 
 RUN R -e 'install.packages("BiocManager"); BiocManager::install()'
 RUN R -e 'BiocManager::install(c("ggplot2", "GEOquery", "genefilter","htmltools", \
