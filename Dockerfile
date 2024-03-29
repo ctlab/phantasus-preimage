@@ -22,7 +22,10 @@ RUN R -e 'BiocManager::install(c("ggplot2", "GEOquery", "genefilter","htmltools"
         "AnnotationDbi", "apeglm", "DESeq2", "Rook"))' && \
     R -e 'remove.packages("BH")'
         
-RUN R -e 'BiocManager::install(c("testthat", "BiocStyle", "knitr", "rmarkdown", "data.table", "rhdf5client", "phantasusLite"))'
+RUN R -e 'BiocManager::install(c("testthat", "BiocStyle", "knitr", "rmarkdown", "data.table"))'
+
+# install rhdf5client >= 1.25.1
+RUN R -e 'BiocManager::install(c("vjcitn/rhdf5client", "ctlab/phantasusLite"))'
 
 RUN \
   cd ~ && \
